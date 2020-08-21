@@ -1,0 +1,10 @@
+ .LeadActorsHeight{
+    height:60px!important;
+
+}
+h3{
+    height: 60px !important;
+} 
+.ui-table{
+    position: static !important;
+} 

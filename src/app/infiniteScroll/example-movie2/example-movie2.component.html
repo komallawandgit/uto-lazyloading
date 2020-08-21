@@ -1,0 +1,27 @@
+<ul 
+  infiniteScroll
+  [infiniteScrollDistance]="0.1"
+  (scrolled)="onScroll()">
+  <div class="row">
+  <li class="col-md-4" *ngFor="let mv of data">
+   <p-card header="Advanced Card" [style]="{width: '800px'}" styleClass="ui-card-shadow">
+          <p-header>
+          <h3 class="bg-warning text-center">Movie Title:{{mv.MovieTitle}}</h3>
+          </p-header>
+         
+         <h4>moovie id {{mv.id}}</h4>
+         <h4>Movie Turnover: {{mv.MovieTurnover}}</h4>
+         <h4>Movie Duration:{{mv.MovieDuration}}</h4>
+         <h4>Released on:{{mv.Releasedon}}</h4> 
+         <h4>Language:{{mv.Language}}</h4> 
+         <h4>BARC Rating:{{mv.BARCrating}}</h4>
+         <div class="LeadActorsHeight">
+         <h4>LeadActors:{{mv.LeadActors}} </h4>
+        </div>
+    </p-card>
+  </li>
+  <hr>
+</div>
+
+</ul>
+

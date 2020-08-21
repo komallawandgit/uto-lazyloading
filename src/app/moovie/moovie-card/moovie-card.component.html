@@ -1,0 +1,60 @@
+<div *ngIf="data.length > 0">
+  <p-table class="ui-scrollpanel-content ui-table	"
+  #dt
+  [value]="dataSource" 
+  [scrollable]="true" 
+  [rows]="row" 
+  scrollHeight="500px" 
+  [virtualScroll]="true"
+  (onLazyLoad)="loadData($event)"
+  [lazy]="true" 
+  [totalRecords]="totaldata" 
+  [loading]="loading"
+>
+<ng-template  pTemplate="body" let-mv class="row ui-table-scrollable-body" style="display: inline-block !important;">  
+  <span  class="col-md-4" style="display: inline-block !important;"> 
+         <p-card [style]="{width:'400px', display: inline-block}" styleClass="" class="card">
+                      <p-header>
+                      <h3 class="bg-warning text-center">{{mv.id}}-{{mv.MovieTitle}}</h3>
+                      </p-header>
+                      <h4>Movie Turnover: {{mv.MovieTurnover}}</h4>
+                      <h4>Movie Duration:{{mv.MovieDuration}}</h4>
+                      <h4>Released on:{{mv.Releasedon}}</h4> 
+                      <h4>Language:{{mv.Language}}</h4> 
+                      <h4>BARC Rating:{{mv.BARCrating}}</h4>
+                      <div class="LeadActorsHeight">
+                      <h4>LeadActors:{{mv.LeadActors}} </h4>
+                    </div>
+           </p-card>
+   </span> 
+</ng-template>   
+</p-table> 
+</div>
+
+
+ 
+
+
+
+
+<!-- 
+<p-dataScroller class="row"  [value]="dataSource" [rows]="10" [lazy]="true" (onLazyLoad)="loadData($event)" [totalRecords]="totalRecords">
+
+    <ng-template class="col-md-4" pTemplate="body" let-mv class="row ui-table-scrollable-body" style="display: inline-block !important;">  
+
+      <p-card  [style]="{width:'400px', display: inline-block}" styleClass="" class="card">
+          <p-header>
+          <h3 class="bg-warning text-center">{{mv.id}}-{{mv.MovieTitle}}</h3>
+          </p-header>
+          <h4>Movie Turnover: {{mv.MovieTurnover}}</h4>
+          <h4>Movie Duration:{{mv.MovieDuration}}</h4>
+          <h4>Released on:{{mv.Releasedon}}</h4> 
+          <h4>Language:{{mv.Language}}</h4> 
+          <h4>BARC Rating:{{mv.BARCrating}}</h4>
+          <div class="LeadActorsHeight">
+          <h4>LeadActors:{{mv.LeadActors}} </h4>
+        </div>
+    </p-card>
+    
+  </ng-template>
+</p-dataScroller> -->

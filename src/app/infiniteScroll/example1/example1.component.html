@@ -1,0 +1,12 @@
+<ul 
+  infiniteScroll
+  [infiniteScrollDistance]="0.1"
+  (scrolled)="onScroll()">
+
+  <li *ngFor="let post of posts">
+    {{post}}
+  </li>
+  
+</ul>
+
+<p>Loading...</p>

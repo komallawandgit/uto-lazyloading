@@ -1,0 +1,18 @@
+li{
+    list-style-type: none;
+    margin-left:0px;
+}
+h3{
+    background-color: rgb(209, 176, 176);
+    color:black;
+    height:55px;
+    margin:0;
+    border:3px solid blueviolet;
+
+}
+h4{
+    color:rgb(67, 113, 136);
+}
+.LeadActorsHeight{
+    height:20px;
+}
